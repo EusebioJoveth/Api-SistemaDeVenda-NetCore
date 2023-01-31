@@ -30,6 +30,7 @@ bld/
 .vs/
 # Descomente se você tiver tarefas que criam os arquivos estáticos do projeto em wwwroot
 #wwwroot/
+.vscode/
 
 # Resultados do teste MSTest
 [Tt]est[Rr]result*/
