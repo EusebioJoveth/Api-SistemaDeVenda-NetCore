@@ -326,10 +326,10 @@ public partial class DbvendaContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("nome");
-            entity.Property(e => e.Pasword)
+            entity.Property(e => e.Password)
                 .HasMaxLength(40)
                 .IsUnicode(false)
-                .HasColumnName("pasword");
+                .HasColumnName("password");
             entity.Property(e => e.Sobrenome)
                 .HasMaxLength(50)
                 .IsUnicode(false)

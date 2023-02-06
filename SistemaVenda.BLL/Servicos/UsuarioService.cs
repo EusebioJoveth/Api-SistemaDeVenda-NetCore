@@ -45,7 +45,7 @@ namespace SistemaVenda.BLL.Servicos
         {
             try {
                 var queryUsuario = await _usuarioRepositorio.Consultar(user =>
-                user.Email == email && user.Pasword == password
+                user.Email == email && user.Password == password
                 );
 
                 if(queryUsuario.FirstOrDefault() == null)
@@ -93,7 +93,7 @@ namespace SistemaVenda.BLL.Servicos
                 usuarioEncontrado.Nome = usuarioModelo.Nome;
                 usuarioEncontrado.Sobrenome = usuarioModelo.Sobrenome;
                 usuarioEncontrado.IdRol = usuarioModelo.IdRol;
-                usuarioEncontrado.Pasword = usuarioModelo.Pasword;
+                usuarioEncontrado.Password = usuarioModelo.Password;
                 usuarioEncontrado.Email = usuarioModelo.Email;
                 usuarioEncontrado.Telefone= usuarioModelo.Telefone;
                 usuarioEncontrado.IsActivo = usuarioModelo.IsActivo;

@@ -21,7 +21,7 @@ public partial class Usuario
 
     public string? Foto { get; set; }
 
-    public string? Pasword { get; set; }
+    public string? Password { get; set; }
 
     public bool? IsActivo { get; set; }
 

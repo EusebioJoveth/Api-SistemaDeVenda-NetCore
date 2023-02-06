@@ -26,7 +26,7 @@ namespace SistemaVenda.DTO
 
         public string? Foto { get; set; }
 
-        public string? Pasword { get; set; }
+        public string? Password { get; set; }
 
         public int? IsActivo { get; set; }
     }
