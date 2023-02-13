@@ -240,13 +240,17 @@ public partial class DbvendaContext : DbContext
             entity.Property(e => e.IdCategoria).HasColumnName("idCategoria");
             entity.Property(e => e.IdImposto).HasColumnName("idImposto");
             entity.Property(e => e.IdMarca).HasColumnName("idMarca");
-            entity.Property(e => e.IsActico)
+            entity.Property(e => e.IsActivo)
                 .HasDefaultValueSql("((1))")
-                .HasColumnName("isActico");
+                .HasColumnName("isActivo");
             entity.Property(e => e.Nome)
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("nome");
+            entity.Property(e => e.Codigo)
+               .HasMaxLength(50)
+               .IsUnicode(false)
+               .HasColumnName("codigo");
             entity.Property(e => e.Preco)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("preco");

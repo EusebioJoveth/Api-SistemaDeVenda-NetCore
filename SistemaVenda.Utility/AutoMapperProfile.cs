@@ -112,8 +112,8 @@ namespace SistemaVenda.Utility
                  opt => opt.MapFrom(origin => Convert.ToString(origin.Preco.Value, new CultureInfo("pt-AO")))
                  )
                  .ForMember(destino =>
-                  destino.IsActico,
-                opt => opt.MapFrom(origin => origin.IsActico == true ? 1 : 0)
+                  destino.IsActivo,
+                opt => opt.MapFrom(origin => origin.IsActivo == true ? 1 : 0)
                 );
 
             CreateMap<ProdutoDTO, Produto>()
@@ -134,8 +134,8 @@ namespace SistemaVenda.Utility
                  opt => opt.MapFrom(origin => Convert.ToDecimal(origin.Preco, new CultureInfo("pt-AO")))
                  )
                  .ForMember(destino =>
-                  destino.IsActico,
-                opt => opt.MapFrom(origin => origin.IsActico == 1 ? true : false)
+                  destino.IsActivo,
+                opt => opt.MapFrom(origin => origin.IsActivo == 1 ? true : false)
                 );
             #endregion Produto
 

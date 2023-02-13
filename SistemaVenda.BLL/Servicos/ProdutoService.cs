@@ -70,11 +70,12 @@ namespace SistemaVenda.BLL.Servicos
                     throw new TaskCanceledException("Produto não existe");
                 
                 produtoEncontrado.Nome= produtoModelo.Nome;
+                produtoEncontrado.Codigo = produtoModelo.Codigo;
                 produtoEncontrado.IdCategoria = produtoModelo.IdCategoria;
                 produtoEncontrado.IdMarca= produtoModelo.IdMarca;
                 produtoEncontrado.IdImposto = produtoModelo.IdImposto;
                 produtoEncontrado.Stock = produtoModelo.Stock;
-                produtoEncontrado.IsActico= produtoModelo.IsActico;
+                produtoEncontrado.IsActivo= produtoModelo.IsActivo;
                 produtoEncontrado.Tipo= produtoModelo.Tipo;
                 produtoEncontrado.Unidade= produtoModelo.Unidade;   
                 produtoEncontrado.Foto= produtoModelo.Foto; 

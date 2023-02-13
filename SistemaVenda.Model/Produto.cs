@@ -8,6 +8,7 @@ public partial class Produto
     public int IdProduto { get; set; }
 
     public string? Nome { get; set; }
+    public string? Codigo { get; set; }
 
     public int? Tipo { get; set; }
 
@@ -23,7 +24,7 @@ public partial class Produto
 
     public decimal? Preco { get; set; }
 
-    public bool? IsActico { get; set; }
+    public bool? IsActivo { get; set; }
 
     public string? Foto { get; set; }
 
