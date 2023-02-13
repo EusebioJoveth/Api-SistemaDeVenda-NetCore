@@ -11,7 +11,7 @@ namespace SistemaVenda.DTO
         public int IdProduto { get; set; }
 
         public string? Nome { get; set; }
-        public string? Coigo { get; set; }
+        public string? Codigo { get; set; }
 
         public int? Tipo { get; set; }
 
