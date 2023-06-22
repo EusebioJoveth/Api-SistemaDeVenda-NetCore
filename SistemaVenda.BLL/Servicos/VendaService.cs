@@ -28,6 +28,7 @@ namespace SistemaVenda.BLL.Servicos
         }
 
         public async Task<VendaDTO> Registar(VendaDTO modelo)
+            
         {
             try
             {

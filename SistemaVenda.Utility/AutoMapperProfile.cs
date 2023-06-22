@@ -142,19 +142,20 @@ namespace SistemaVenda.Utility
             #region Venda
             CreateMap<Venda, VendaDTO>()
                 .ForMember(destino =>
-                destino.Total,
-                opt => opt.MapFrom(origin => Convert.ToString(origin.Total.Value, new CultureInfo("pt-AO")))
+                destino.TotalTexto,
+                opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("pt-AO")))
                 )
                 .ForMember(destino =>
                 destino.DataRegisto,
-                opt => opt.MapFrom(origin => origin.DataRegisto.Value.ToString("dd/MM/yyyy"))
+                opt => opt.MapFrom(origen => origen.DataRegisto.Value.ToString("dd/MM/yyyy"))
                 );
 
             CreateMap<VendaDTO, Venda>()
-                .ForMember(destino =>
-                  destino.Total,
-                  opt => opt.MapFrom(origin => Convert.ToDecimal(origin.Total, new CultureInfo("pt-AO")))
-                );
+                 .ForMember(destino =>
+                 destino.Total,
+                 opt => opt.MapFrom(origin => Convert.ToDecimal(origin.TotalTexto, new CultureInfo("pt-AO")))
+                 );
+              
             #endregion Venda
 
             #region DetalheVenda
@@ -164,22 +165,30 @@ namespace SistemaVenda.Utility
                 opt => opt.MapFrom(origin => origin.IdProdutoNavigation.Nome)
                 )
                 .ForMember(destino =>
-                destino.Preco,
+                destino.PrecoTexto,
                 opt => opt.MapFrom(origin => Convert.ToString(origin.Preco.Value, new CultureInfo("pt-AO")))
                 )
                 .ForMember(destino =>
-                destino.Total,
+                destino.TotalTexto,
                 opt => opt.MapFrom(origin => Convert.ToString(origin.Total.Value, new CultureInfo("pt-AO")))
+                )
+             .ForMember(destino =>
+                destino.Desconto,
+                opt => opt.MapFrom(origin => Convert.ToString(origin.Desconto.Value))
                 );
 
             CreateMap<DetalheVendaDTO, DetalheVenda>()
                .ForMember(destino =>
                destino.Preco,
-               opt => opt.MapFrom(origin => Convert.ToDecimal(origin.Preco, new CultureInfo("pt-AO")))
+               opt => opt.MapFrom(origin => Convert.ToDecimal(origin.PrecoTexto, new CultureInfo("pt-AO")))
                )
                .ForMember(destino =>
                destino.Total,
-               opt => opt.MapFrom(origin => Convert.ToDecimal(origin.Total, new CultureInfo("pt-AO")))
+               opt => opt.MapFrom(origin => Convert.ToDecimal(origin.TotalTexto, new CultureInfo("pt-AO")))
+               )
+               .ForMember(destino =>
+               destino.Desconto,
+               opt => opt.MapFrom(origin => Convert.ToDecimal(origin.Desconto, new CultureInfo("pt-AO")))
                );
 
             #endregion DetalheVEnda
