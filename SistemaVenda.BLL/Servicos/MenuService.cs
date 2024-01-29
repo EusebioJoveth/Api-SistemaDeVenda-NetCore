@@ -49,5 +49,86 @@ namespace SistemaVenda.BLL.Servicos
 
             }
         }
+
+        public async Task<List<MenuDTO>> Menus()
+        {
+            try
+            {
+                var listaCategoria = await _menuRepository.Consultar();
+                return _mapper.Map<List<MenuDTO>>(listaCategoria.ToList());
+
+            }
+            catch
+            {
+                throw;
+
+            }
+        }
+
+        public async Task<MenuDTO> Criar(MenuDTO modelo)
+        {
+            try
+            {
+                var menuCriado = await _menuRepository.Criar(_mapper.Map<Menu>(modelo));
+                if (menuCriado.IdMenu == 0)
+                    throw new TaskCanceledException("Não foi possível Criar");
+
+                return _mapper.Map<MenuDTO>(menuCriado);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public async Task<bool> Editar(MenuDTO modelo)
+        {
+            try
+            {
+                var menuModelo = _mapper.Map<Menu>(modelo);
+                var menuEncontrado = await _menuRepository.Listar(menu => menu.IdMenu == menuModelo.IdMenu);
+
+                if (menuEncontrado == null)
+                    throw new TaskCanceledException("Menu não existe");
+
+                menuEncontrado.Nome = menuModelo.Nome;
+                menuEncontrado.Icone = menuModelo.Icone;
+                menuEncontrado.Url = menuModelo.Url;
+
+                bool resposta = await _menuRepository.Editar(menuEncontrado);
+
+                if (!resposta)
+                    throw new TaskCanceledException("Não é possível actualizar");
+                return resposta;
+
+
+            }
+            catch
+            {
+                throw;
+
+            }
+        }
+
+        public async Task<bool> Eliminar(int id)
+        {
+            try
+            {
+                var menuEncontrado = await _menuRepository.Listar(menu => menu.IdMenu == id);
+                if (menuEncontrado == null)
+                    throw new TaskCanceledException("Não Existe o Menu");
+
+                bool resposta = await _menuRepository.Eliminar(menuEncontrado);
+
+                if (!resposta)
+                    throw new TaskCanceledException("Não é possível eliminar");
+                return resposta;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }
