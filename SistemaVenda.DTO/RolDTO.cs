@@ -8,9 +8,9 @@ namespace SistemaVenda.DTO
 {
     public  class RolDTO
     {
-        public int idRol { get; set; }
+        public int IdRol { get; set; }
 
-        public string nome { get; set; }
+        public string? Nome { get; set; }
 
         public DateTime DataActualizacao { get; set; }
     }

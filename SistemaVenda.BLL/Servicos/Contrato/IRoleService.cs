@@ -11,5 +11,8 @@ namespace SistemaVenda.BLL.Servicos.Contrato
     public interface IRoleService
     {
         Task<List<RolDTO>> Lista();
+        Task<RolDTO> Criar(RolDTO modelo);
+        Task<bool> Editar(RolDTO modelo);
+        Task<bool> Eliminar(int id);
     }
 }

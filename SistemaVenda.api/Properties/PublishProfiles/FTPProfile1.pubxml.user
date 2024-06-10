@@ -7,7 +7,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAeZjfLzqKPky5mBAmmQMhvQAAAAACAAAAAAAQZgAAAAEAACAAAAAf3PQLLeBZfPQqljKSlsPUNL996VjJBgi/SSqr1GWAzwAAAAAOgAAAAAIAACAAAAA++Qqp++bz3k4uiTzZVcLNtYOh7mxsbZZZcXRhMvCrNCAAAAAlMbuCBaTAsAdqDMgdRg7HjQQBmf1rBGIxSi9fHMj1UEAAAAAhO99x0bm3RZ9G6psd/SHRT2YBWTDXl1alfUXf6EU+3NpH8QQb4tshG/FBrFTJEmoI5zllfxjsyAqiQYn3opnX</EncryptedPassword>
     <_PublishTargetUrl>ftp://155.254.244.27/www.ApiSitemaDeVenda.somee.com</_PublishTargetUrl>
-    <History>True|2024-01-25T09:41:51.4071333Z;</History>
+    <History>True|2024-01-29T11:37:20.1678626Z;True|2024-01-25T10:41:51.4071333+01:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -15,7 +15,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/12/2023 10:49:13</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>01/25/2024 10:21:43</publishTime>
+      <publishTime>01/29/2024 12:11:52</publishTime>
     </File>
     <File Include="AutoMapper.dll">
       <publishTime>09/30/2022 10:45:38</publishTime>
@@ -120,25 +120,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/19/2020 19:49:30</publishTime>
     </File>
     <File Include="SistemaVenda.api.deps.json">
-      <publishTime>01/25/2024 10:37:20</publishTime>
+      <publishTime>01/29/2024 12:30:45</publishTime>
     </File>
     <File Include="SistemaVenda.api.dll">
-      <publishTime>01/25/2024 10:37:18</publishTime>
+      <publishTime>01/29/2024 12:30:44</publishTime>
     </File>
     <File Include="SistemaVenda.api.exe">
-      <publishTime>01/25/2024 10:37:18</publishTime>
+      <publishTime>01/29/2024 12:30:44</publishTime>
     </File>
     <File Include="SistemaVenda.api.pdb">
-      <publishTime>01/25/2024 10:37:18</publishTime>
+      <publishTime>01/29/2024 12:30:44</publishTime>
     </File>
     <File Include="SistemaVenda.api.runtimeconfig.json">
       <publishTime>01/25/2024 10:30:25</publishTime>
     </File>
     <File Include="SistemaVenda.BLL.dll">
-      <publishTime>01/25/2024 10:30:23</publishTime>
+      <publishTime>01/29/2024 12:30:40</publishTime>
     </File>
     <File Include="SistemaVenda.BLL.pdb">
-      <publishTime>01/25/2024 10:30:23</publishTime>
+      <publishTime>01/29/2024 12:30:40</publishTime>
     </File>
     <File Include="SistemaVenda.DAL.dll">
       <publishTime>01/25/2024 10:30:23</publishTime>
@@ -153,10 +153,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/25/2024 10:30:20</publishTime>
     </File>
     <File Include="SistemaVenda.IOC.dll">
-      <publishTime>01/25/2024 10:30:24</publishTime>
+      <publishTime>01/29/2024 12:30:41</publishTime>
     </File>
     <File Include="SistemaVenda.IOC.pdb">
-      <publishTime>01/25/2024 10:30:24</publishTime>
+      <publishTime>01/29/2024 12:30:41</publishTime>
     </File>
     <File Include="SistemaVenda.Model.dll">
       <publishTime>01/25/2024 10:30:22</publishTime>
@@ -204,7 +204,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/19/2020 19:53:38</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>01/25/2024 10:37:44</publishTime>
+      <publishTime>01/29/2024 12:32:20</publishTime>
     </File>
   </ItemGroup>
 </Project>
